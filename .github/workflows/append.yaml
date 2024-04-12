@@ -29,6 +29,7 @@ jobs:
       run: | 
         git config --local user.email "sundaresh.sankaran@gmail.com" 
         git config --local user.name "SundareshSankaran" 
+        git config --local user.password ${{ secrets.NOTHINGIMP }}
         git add .
         git commit -m "Add new file by append.py" || exit 0
         git push

@@ -27,10 +27,10 @@ jobs:
     - name: Commits to repo
       working-directory: ./
       run: | 
-        git config --local user.email "sundaresh.sankaran@gmail.com" 
-        git config --local user.name "SundareshSankaran" 
-        git config --local user.password ${{ secrets.NOTHINGIMP }}
+        git config --global user.email "sundaresh.sankaran@gmail.com" 
+        git config --global user.name "SundareshSankaran" 
+        git config --global user.password ${{ secrets.NOTHINGIMP }}
         git add .
-        git commit -m "Add new file by append.py" || exit 0
+        git commit -a -m "Add new file by append.py" || exit 0
         git push
       

@@ -21,3 +21,12 @@ jobs:
     - name: Runs code
       working-directory: ./
       run: python append.py
+    - name: Commits to repo
+      working-directory: ./
+      run: 
+        git config --local user.email "sundaresh.sankaran@gmail.com"
+        git config --local user.name "SundareshSankaran"
+        git add .
+        git commit -m "Add new file by append.py" || exit 0
+        git push
+      

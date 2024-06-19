@@ -5,7 +5,7 @@ code_list = [f for f in os.listdir(code_dir) if os.path.isfile(os.path.join(code
 print(os.getcwd())
 print(list(os.listdir(code_dir)))
 
-with open(os.path.join(os.getcwd(),"These_Are_All.files"), 'w') as outfile:
+with open(os.path.join(os.getcwd(),"..","These_Are_All.files"), 'w+') as outfile:
     for fname in code_list:
         with open(os.path.join(code_dir,fname)) as infile:
             outfile.write(infile.read())

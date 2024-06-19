@@ -12,3 +12,5 @@ with open(os.path.join(os.getcwd(),"..","These_Are_All.files"), 'w+') as outfile
             outfile.write("   \n")
             outfile.write("   \n")
             outfile.write("   \n")
+        print("appended {}".format(fname))
+        

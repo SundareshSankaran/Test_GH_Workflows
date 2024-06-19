@@ -1,0 +1,26 @@
+name: List Changed Files
+
+on:
+  push:
+    paths:
+      - '*/*.txt'
+
+jobs:
+  list_changed_files:
+    name: Lists out files of a type which have changed in a push 
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: true  # Ensures credentials are available for push
+        fetch-depth: 0
+    - name: Get changed files
+      id: changed-files
+      uses: tj-actions/changed-files@v44
+    - name: List all changed files
+      env:
+        ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+      run: |
+        for file in ${ALL_CHANGED_FILES}; do
+          echo "$file was changed"
+        done

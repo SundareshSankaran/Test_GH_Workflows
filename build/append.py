@@ -1,6 +1,6 @@
 import os
 code_dir = os.path.join(os.getcwd(),"..","files")
-code_list = [f for f in os.listdir(code_dir) if os.path.isfile(os.path.join(code_dir, f)) and f.endswith("file")]
+code_list = [f for f in os.listdir(code_dir) if os.path.isfile(os.path.join(code_dir, f)) and f.endswith(["file","txt"])]
 
 print(os.getcwd())
 print(list(os.listdir(code_dir)))
@@ -13,4 +13,3 @@ with open(os.path.join(os.getcwd(),"..","These_Are_All.files"), 'w+') as outfile
             outfile.write("   \n")
             outfile.write("   \n")
         print("appended {}".format(fname))
-        

@@ -1,5 +1,5 @@
 import os
-code_dir = os.path.join(os.getcwd(),"files")
+code_dir = os.path.join(os.getcwd(),"..","files")
 code_list = [f for f in os.listdir(code_dir) if os.path.isfile(os.path.join(code_dir, f)) and f.endswith("file")]
 
 print(os.getcwd())

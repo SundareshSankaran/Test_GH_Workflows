@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: python -m pip install --upgrade pip setuptools wheel
     - name: Runs code
-      working-directory: ./
+      working-directory: ./build
       run: python append.py
     - name: Commits to repo
       working-directory: ./
